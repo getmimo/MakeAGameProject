@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
       rigidBody.velocity = new Vector2 (5,0);
     if (Input.GetKey ("left"))
       rigidBody.velocity = new Vector2 (-5,0);
-    if (Input.GetKey ("space"))
+    if (Input.GetKeyDown ("space"))
       rigidBody.velocity = new Vector2 (0,10);
     if (transform.position.y < -6)
       transform.position = new Vector2 (-5,2);
