@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.anyKey)
-			Debug.Log ("We have input!");
+
 	}
 }
