@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-  void Start () {
+  public bool moveLeft;
   
+  void Start () {
+    moveLeft = true;
   }
   
   void Update () {
