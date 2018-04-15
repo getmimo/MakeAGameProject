@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour {
   }
 
   public void OnTriggerEnter2D (Collider2D other) {
-    Debug.Log(other.name);
+    if (other.name == "EnemyDamage") {
+      transform.position = new Vector2 (2, 1);
+    }
   }
 }
