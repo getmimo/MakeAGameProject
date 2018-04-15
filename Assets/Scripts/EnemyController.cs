@@ -18,17 +18,20 @@ public class EnemyController : MonoBehaviour {
     wallCollision = Physics2D.OverlapCircle (wallCheck.position, wallCheckRadius, groundLayer);
   }
   
-  void Update () {
+  void Update ()
+  {
     var rigidBody = GetComponent<Rigidbody2D> ();
     
     if (wallCollision) {
       moveLeft = !moveLeft;
     }
-    
+
     if (moveLeft) {
+      transform.localScale = new Vector2 (1,1);
       rigidBody.velocity = new Vector2 (-5, rigidBody.velocity.y);
     } else {
-        rigidBody.velocity = new Vector2 (5,rigidBody.velocity.y);
+      transform.localScale = new Vector2 (-1,1);
+      rigidBody.velocity = new Vector2 (5,rigidBody.velocity.y);
     } 
   }
 }
