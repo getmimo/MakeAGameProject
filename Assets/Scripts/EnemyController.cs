@@ -15,11 +15,16 @@ public class EnemyController : MonoBehaviour {
   }
 
   void FixedUpdate () {
-  
+    wallCollision = Physics2D.OverlapCircle (wallCheck.position, wallCheckRadius, groundLayer);
   }
   
   void Update () {
     var rigidBody = GetComponent<Rigidbody2D> ();
+    
+    if (wallCollision) {
+      moveLeft = !moveLeft;
+    }
+    
     if (moveLeft) {
       rigidBody.velocity = new Vector2 (-5, rigidBody.velocity.y);
     } else {
