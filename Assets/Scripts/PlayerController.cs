@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour {
 
   void FixedUpdate () {
     groundCollision = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);
-    Debug.Log ("I am grounded = " + groundCollision);
-
   }
 
   void Update ()

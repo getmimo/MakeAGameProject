@@ -34,4 +34,10 @@ public class EnemyController : MonoBehaviour {
       rigidBody.velocity = new Vector2 (5,rigidBody.velocity.y);
     } 
   }
+
+  void OnTriggerEnter2D (Collider2D other) {
+    if (other.name == "HeadStomper") {
+      Destroy (gameObject);
+    }
+  }
 }
