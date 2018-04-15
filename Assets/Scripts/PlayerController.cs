@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+  public SpriteRenderer sprite;
+
+
   void Start () {
 
   }
@@ -11,10 +14,14 @@ public class PlayerController : MonoBehaviour {
   void Update () {
     var rigidBody = GetComponent<Rigidbody2D> ();
     var transform = GetComponent<Transform> ();
-    if (Input.GetKey ("right"))
-      rigidBody.velocity = new Vector2 (5,rigidBody.velocity.y);
-    if (Input.GetKey ("left"))
-      rigidBody.velocity = new Vector2 (-5,rigidBody.velocity.y);
+    if (Input.GetKey ("right")) {
+      sprite.flipX = false; 
+      rigidBody.velocity = new Vector2 (5, rigidBody.velocity.y);
+    }
+    if (Input.GetKey ("left")) {
+      sprite.flipX = true;
+      rigidBody.velocity = new Vector2 (-5, rigidBody.velocity.y);
+    }
     if (Input.GetKeyDown ("space"))
       rigidBody.velocity = new Vector2 (rigidBody.velocity.x,10);
     if (transform.position.y < -6) 

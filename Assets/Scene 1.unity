@@ -1430,6 +1430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d942bdb146eec4c418772947c2d1eb35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 735771688}
 --- !u!1001 &756033466
 Prefab:
   m_ObjectHideFlags: 0
