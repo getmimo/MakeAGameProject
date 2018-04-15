@@ -24,4 +24,8 @@ public class PlayerController : MonoBehaviour {
         transform.position = new Vector2 (2,2);
   
   }
+
+  public void OnTriggerEnter2D (Collider2D other) {
+    Debug.Log(other.name);
+  }
 }
