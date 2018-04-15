@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour {
   public float groundCheckRadius;
   private bool groundCollision;
   private bool doubleJumped;
-
+  public CanvasGroup canvasYouWin;
 
   void Start () {
 
@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour {
   public void OnTriggerEnter2D (Collider2D other) {
     if (other.name == "EnemyDamage") {
       transform.position = new Vector2 (2, 1);
+    } else if (other.name == "exit") {
+      canvasYouWin.alpha = 1;
     }
   }
 }
