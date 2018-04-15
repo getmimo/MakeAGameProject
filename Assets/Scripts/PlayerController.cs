@@ -5,10 +5,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
   public SpriteRenderer sprite;
-
+  private bool grounded;
+  public LayerMask groundLayer;
+  public Transform groundCheck;
+  public float groundCheckRadius;
+  private bool groundCollision;
 
   void Start () {
 
+  }
+
+  void FixedUpdate () {
+    groundCollision = Physics2D.OverlapCircle (groundCheck.position, groundCheckRadius, groundLayer);
   }
 
   void Update () {
