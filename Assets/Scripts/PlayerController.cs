@@ -26,12 +26,20 @@ public class PlayerController : MonoBehaviour {
     var transform = GetComponent<Transform> ();
     if (Input.GetKey ("right")) {
       sprite.flipX = false; 
-      rigidBody.velocity = new Vector2 (5, rigidBody.velocity.y);
+      if (Input.GetKey ("left shift")) 
+        rigidBody.velocity = new Vector2 (10, rigidBody.velocity.y);
+      else
+        rigidBody.velocity = new Vector2 (5, rigidBody.velocity.y);
     }
+
     if (Input.GetKey ("left")) {
       sprite.flipX = true;
-      rigidBody.velocity = new Vector2 (-5, rigidBody.velocity.y);
+      if (Input.GetKey ("left shift"))
+        rigidBody.velocity = new Vector2 (-10, rigidBody.velocity.y);
+      else
+        rigidBody.velocity = new Vector2 (-5, rigidBody.velocity.y);
     }
+
     if (groundCollision)
       doubleJumped = false;
     if (Input.GetKeyDown ("space") && groundCollision)
