@@ -19,7 +19,6 @@ public class EnemyController : MonoBehaviour {
   void FixedUpdate () {
     wallCollision = Physics2D.OverlapCircle (wallCheck.position, wallCheckRadius, groundLayer);
     notAtEdge = Physics2D.OverlapCircle (edgeCheck.position, wallCheckRadius, groundLayer);
-    Debug.Log(notAtEdge);
   }
   
   void Update ()
