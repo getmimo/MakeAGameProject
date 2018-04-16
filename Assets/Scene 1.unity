@@ -1492,6 +1492,7 @@ MonoBehaviour:
     m_Bits: 256
   groundCheck: {fileID: 1577550760}
   groundCheckRadius: 0.2
+  canvasYouWin: {fileID: 835229436}
 --- !u!1001 &756033466
 Prefab:
   m_ObjectHideFlags: 0
@@ -1775,7 +1776,7 @@ GameObject:
   - component: {fileID: 835229437}
   - component: {fileID: 835229436}
   m_Layer: 5
-  m_Name: Text
+  m_Name: WonScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
