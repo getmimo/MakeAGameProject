@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	void Start () {
+  void Start () {
 
-	}
+  }
 
-	void Update () {
+  void Update () {
 
-	}
+  }
 }
