@@ -22,6 +22,5 @@ public class PlayerController : MonoBehaviour {
         transform.position = new Vector2 (-5,2);
     else
         transform.position = new Vector2 (2,2);
-  
   }
 }
